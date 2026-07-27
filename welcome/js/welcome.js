@@ -12,7 +12,7 @@ if (!studentData || studentData.userType !== 'student') {
 }
 
 // Fetch subjects specifically for this student using their enrollment ID
-fetch(`http://localhost:3000/api/student/subjects/${studentData.enrollment}/${brandCode}`)
+fetch(`https://quizy-proctor.onrender.com/api/student/subjects/${studentData.enrollment}/${brandCode}`)
     .then(res => res.json())
     .then(response => {
         if (response.ok && response.data) {

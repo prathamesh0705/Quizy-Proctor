@@ -5,7 +5,7 @@
 
 // ---------------------- API helpers ----------------------
 // These functions use standard browser 'fetch' and do not use Node.js 'require'.
-const API_BASE = "http://localhost:3000/api";
+const API_BASE = "https://quizy-proctor.onrender.com/api";
 
 async function apiGet(path) {
   try {

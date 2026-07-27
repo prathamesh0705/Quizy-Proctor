@@ -1,7 +1,7 @@
 // Get all brand codes from the database
 const brandCodeEl = document.querySelector("#brand-code-el");
 
-fetch("http://localhost:3000/api/brands")
+fetch("https://quizy-proctor.onrender.com/api/brands")
     .then(res => res.json())
     .then(data => {
         data.forEach(brand => {
@@ -45,7 +45,7 @@ loginForm.onsubmit = function (e) {
     const enrollmentValue = allLoginInput[0].value;
     const passwordValue = allLoginInput[1].value;
 
-    fetch(`http://localhost:3000/api/user/login`, {
+    fetch(`https://quizy-proctor.onrender.com/api/user/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

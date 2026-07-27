@@ -3,7 +3,7 @@
 // ===========================================
 
 // ---------------------- API helpers ----------------------
-const API_BASE = "http://localhost:3000/api";
+const API_BASE = "https://quizy-proctor.onrender.com/api";
 
 async function apiGet(path) {
     const res = await fetch(`${API_BASE}${path}`);

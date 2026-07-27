@@ -39,7 +39,7 @@ const registrationData = () => {
         password: allInput[5].value
     };
 
-    fetch("http://localhost:3000/api/register", {
+    fetch("https://quizy-proctor.onrender.com/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(userData)
@@ -68,7 +68,7 @@ var password = document.querySelector("#password");
 signinBtn.onclick = function (e) {
     e.preventDefault();
     if (brandCode.value && username.value && password.value !== "") {
-        fetch("http://localhost:3000/api/login", {
+        fetch("https://quizy-proctor.onrender.com/api/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

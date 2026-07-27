@@ -52,7 +52,7 @@ function showOnScreenMessage(message, duration = 3000) {
 // =========================
 async function fetchQuestions() {
     try {
-        const res = await fetch(`http://localhost:3000/api/questions/${brandCode}/${encodeURIComponent(subject)}`);
+        const res = await fetch(`https://quizy-proctor.onrender.com/api/questions/${brandCode}/${encodeURIComponent(subject)}`);
         const response = await res.json();
         if (response.ok && response.data) {
             allQuestion = response.data;
@@ -74,7 +74,7 @@ async function fetchQuestions() {
 // Submit Quiz (NO CHANGE - Your original code)
 // =========================
 function submitFunc() {
-    fetch('http://localhost:3000/api/results', {
+    fetch('https://quizy-proctor.onrender.com/api/results', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -388,7 +388,7 @@ async function startCamera() {
 
 async function checkAttempt() {
     try {
-        const res = await fetch(`http://localhost:3000/api/checkAttempt/${brandCode}/${encodeURIComponent(subject)}/${encodeURIComponent(enrollment)}`);
+        const res = await fetch(`https://quizy-proctor.onrender.com/api/checkAttempt/${brandCode}/${encodeURIComponent(subject)}/${encodeURIComponent(enrollment)}`);
         const data = await res.json();
         if (data.attempted) {
             showOnScreenMessage("❌ You have already attempted this test!", 4000);
