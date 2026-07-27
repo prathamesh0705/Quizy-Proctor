@@ -420,7 +420,7 @@ async function startAudioDetection() {
             analyser.getByteFrequencyData(dataArray);
             const average = dataArray.reduce((a, b) => a + b, 0) / dataArray.length;
             const now = Date.now();
-            if (average > 100 && now - lastWarningTime > 3000) {
+            if (average > 30 && now - lastWarningTime > 3000) {
                 audioWarningCount++;
                 lastWarningTime = now;
                 showOnScreenMessage(`⚠️ Warning ${audioWarningCount}/3: Noise detected!`);
