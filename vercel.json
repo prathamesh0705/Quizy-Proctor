@@ -1,8 +1,9 @@
 {
-  "rewrites": [
+  "redirects": [
     {
       "source": "/",
-      "destination": "/company/company.html"
+      "destination": "/company/company.html",
+      "permanent": false
     }
   ]
 }
