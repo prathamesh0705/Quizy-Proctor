@@ -6,7 +6,13 @@ const cors = require("cors");
 const db = require("./db"); // your db.js connection
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: [
+        "https://quizy-proctor.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 // Increase the limit to accept larger data, like images
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
