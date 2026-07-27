@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #182848;
+    background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
+    background: linear-gradient(to right, #4b6cb7, #182848);
+}
+
+.login-container {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.login-container h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input, .input-box select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 20px 0 45px;
+    -webkit-appearance: none; /* Removes default select styling */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input-box select {
+    cursor: pointer;
+}
+
+/* Styling for select dropdown options */
+.input-box select option {
+    background: #182848;
+    color: #fff;
+}
+
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box input:disabled, .input-box select:disabled {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
+
+
+.input-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.login-btn {
+    background: #fff !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+    border-radius: 40px !important;
+    box-shadow: none !important;
+    height: 45px;
+    font-size: 16px !important;
+}
+
+.login-btn:disabled {
+    background: #aaa !important;
+    color: #555 !important;
+}
+
+.admin-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.admin-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.admin-link a:hover {
+    text-decoration: underline;
+}

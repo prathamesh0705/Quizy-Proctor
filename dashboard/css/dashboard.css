@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #1e293b;         /* Main background - Dark Slate Blue */
+    --surface-color: #2c3a4e;      /* Card and Sidebar background */
+    --primary-color: #22d3ee;     /* Accent color - Vibrant Cyan */
+    --primary-hover: #5ee9ff;     /* Lighter cyan for hover */
+    --text-primary: #f8fafc;      /* Headings and important text */
+    --text-secondary: #cbd5e1;   /* Body text */
+    --border-color: #3e4d61;      /* Subtle borders */
+    --danger-color: #f43f5e;       /* For delete/logout */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-secondary);
+}
+
+/* --- Side Navigation --- */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--surface-color);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.side-nav .profile-pic {
+    width: 110px;
+    height: 110px;
+    background-image: url(../images/avtar.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.side-nav ul {
+    width: 100%;
+    padding-left: 0;
+}
+
+.side-nav .list-group-item {
+    border: none;
+    background-color: transparent !important;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 15px 30px;
+    transition: 0.3s ease;
+    border-left: 5px solid transparent;
+}
+
+.side-nav .list-group-item.active, .side-nav .list-group-item:hover {
+    background: linear-gradient(90deg, rgba(34, 211, 238, 0.1), transparent) !important;
+    color: #fff;
+    border-left: 5px solid var(--primary-color);
+}
+
+.side-nav #logout-btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background-color: transparent;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 30px;
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.side-nav #logout-btn:hover {
+    background-color: var(--danger-color);
+    color: #fff;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    margin-left: 250px;
+    padding: 25px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header h1 {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.toggler-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-primary);
+    display: none;
+}
+
+/* --- Tab Styling --- */
+.nav-tabs {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    margin-bottom: -1px;
+    transition: 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    background-color: transparent;
+    border-color: var(--primary-color);
+}
+
+.nav-tabs .nav-link:hover {
+    color: var(--primary-hover);
+}
+
+.tab-content {
+    padding-top: 30px;
+}
+
+/* --- Stat Cards --- */
+.stat-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card i {
+    font-size: 28px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    color: var(--dark-blue);
+    background-color: var(--primary-color);
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--text-primary);
+}
+
+.stat-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* --- General Card & Form Styling --- */
+.card, .accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--surface-color);
+    margin-bottom: 25px;
+}
+
+.card-title, .accordion-header button {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.accordion-body {
+    color: var(--text-secondary);
+}
+
+.accordion-button {
+    background-color: var(--surface-color);
+    color: var(--text-primary);
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #35465c;
+    box-shadow: inset 0 -1px 0 var(--border-color);
+    color: var(--primary-color);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 .25rem rgba(34, 211, 238, 0.25);
+}
+
+.form-control, .form-select {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+}
+.form-select option {
+    background: var(--bg-color);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 .25rem rgba(34, 211, 238, 0.25);
+}
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+label {
+    color: var(--text-secondary);
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bg-color);
+    font-weight: 600;
+    padding: .6rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(34, 211, 238, 0.3);
+}
+
+/* Table styling */
+.table {
+    color: var(--text-secondary);
+}
+.table thead th {
+    border-bottom: 2px solid var(--border-color);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+}
+.table-hover > tbody > tr:hover > * {
+    color: var(--text-primary);
+    background-color: rgba(34, 211, 238, 0.1);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 991px) {
+    .side-nav {
+        transform: translateX(-250px);
+    }
+    .side-nav.active {
+        transform: translateX(0);
+        box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .toggler-icon {
+        display: block;
+    }
+}
+
+/* --- Certificate Styling (to match dark theme) --- */
+.certificate-main {
+    width: 800px; height: 1000px; position: fixed; top: 50%; left: 50%;
+    transform: translate(-50%, -50%); border: 2px solid var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); background-color: #fff;
+    opacity: 0; visibility: hidden; z-index: -100;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.certificate-main.active { opacity: 1; visibility: visible; z-index: 1050; }
+/* ... other certificate styles ... */
+
+.card .table {
+    border-spacing: 0;
+}
+
+.card .table td,
+.card .table th {
+    padding: 0.75rem; 
+}
+
+/* NEW FIX: Hides stray paragraphs that cause extra spacing in tables */
+.subject-result-data > p {
+    display: none;
+}

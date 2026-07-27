@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #1e293b;
+    --surface-color: #2c3a4e;
+    --primary-color: #22d3ee;
+    --primary-hover: #5ee9ff;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --border-color: #3e4d61;
+    --danger-color: #ef4444;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color) !important;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.quiz-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--surface-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-header {
+    padding: 20px 30px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.quiz-header h2 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.quiz-body {
+    padding: 30px;
+}
+
+.question-el {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.options-container .option {
+    display: block;
+    background-color: var(--bg-color);
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.options-container .option:hover {
+    border-color: var(--primary-color);
+}
+
+.options-container .option input {
+    margin-right: 15px;
+}
+
+.options-container .option label {
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.quiz-footer {
+    padding: 20px 30px;
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+}
+
+#next-btn {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--bg-color);
+    font-weight: 600;
+    padding: .6rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#next-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* --- Attractive Question Navigation Styles --- */
+.quiz-navigation {
+    padding: 20px 30px;
+    border-top: 1px solid var(--border-color);
+    background-color: rgba(0,0,0,0.1); /* Slightly different background to stand out */
+}
+
+.quiz-navigation h5 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.quiz-navigation-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    /* --- CHANGED --- */
+    gap: 12px; /* A bit more space for bigger buttons */
+}
+
+.quiz-navigation button {
+    /* --- CHANGED --- */
+    width: 45px;   /* Made buttons bigger */
+    height: 45px;  /* Made buttons bigger */
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    background-color: var(--surface-color);
+    color: var(--text-secondary);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+}
+
+.quiz-navigation button:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-color);
+}
+
+.quiz-navigation button.answered {
+    background-color: #3b82f6; /* Blue for answered */
+    color: white;
+    border-color: #3b82f6;
+}
+
+.quiz-navigation button.current {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-hover);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.4);
+}
+
+/* Add this code to the end of your quiz.css file */
+
+/* Style for the selected, locked answer to make it stand out */
+.option.selected-answer {
+    background-color: var(--primary-color);
+    border-color: var(--primary-hover);
+}
+
+/* Make the text inside the selected answer dark for better contrast */
+.option.selected-answer label {
+    color: var(--bg-color);
+    font-weight: 600;
+}
+
+/* Style for the other, unselected disabled options */
+.option.disabled-option {
+    opacity: 0.5; /* Fades out the options that weren't picked */
+}

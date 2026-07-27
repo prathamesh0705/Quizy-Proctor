@@ -1,0 +1,114 @@
+/* Import Poppins font for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Define color variables to match quiz.css */
+:root {
+    --bg-color: #1e293b;
+    --surface-color: #2c3a4e;
+    --primary-color: #22d3ee;
+    --primary-hover: #5ee9ff;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --border-color: #3e4d61;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color) !important;
+    color: var(--text-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.welcome-container {
+    width: 100%;
+    max-width: 650px;
+    background-color: var(--surface-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.welcome-header {
+    padding: 30px 40px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.welcome-header h2 {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.welcome-body {
+    padding: 30px 40px;
+}
+
+.guidelines-list {
+    list-style: none;
+    padding: 0;
+}
+
+.guidelines-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.guidelines-list li i {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-right: 20px;
+    width: 25px; /* Ensures text aligns neatly */
+    text-align: center;
+}
+
+.welcome-footer {
+    padding: 30px 40px;
+    background-color: rgba(0,0,0,0.2);
+    border-top: 1px solid var(--border-color);
+}
+
+#select-subject-el {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    font-size: 1rem;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+#select-subject-el:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+}
+
+.start-quiz-btn {
+    width: 100%;
+    background-color: var(--primary-color) !important;
+    color: var(--bg-color) !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+}
+
+.start-quiz-btn:hover {
+    background-color: var(--primary-hover) !important;
+    transform: translateY(-2px);
+}

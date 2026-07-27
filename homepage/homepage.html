@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="../common/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="../common/js/bootstrap.bundle.min.js"></script>
+    <script src="../common/js/sweetalert.min.js"></script>
+</head>
+<body>
+    
+    <div class="login-container">
+        <form class="login-form">
+            <h1>LOGIN</h1>
+            
+            <div class="input-box">
+                <i class="fa-solid fa-school"></i>
+                <select id="brand-code-el" class="form-select">
+                    <option value="choose space code">Choose College Code</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" class="form-control" placeholder="Institute ID" disabled>
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" class="form-control" placeholder="Password" disabled>
+            </div>
+            
+            <button class="btn login-btn w-100" disabled>Login</button>
+
+            <div class="admin-link">
+                <a href="../company/company.html">Admin Login</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/homepage.js"></script>
+</body>
+</html>

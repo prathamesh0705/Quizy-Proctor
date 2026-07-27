@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+    <link rel="stylesheet" href="../common/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/company.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="../common/js/bootstrap.bundle.min.js"></script>
+    <script src="../common/js/sweetalert.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">WELCOME TO QUIZY !! </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <div class="navbar-nav ms-auto">
+                        <a href="#" class="nav-link">Home</a>
+                        <a href="#" class="nav-link">Contact</a>
+                        <a href="#" class="nav-link btn signup-btn">Sign up</a>
+                        <a href="#" class="nav-link d-none btn login-btn">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="form-wrapper">
+                    <div class="login-box active">
+                        <form class="login-form">
+                            <h1>Admin Login</h1>
+                            <div class="input-box">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <input type="text" id="brand-code" class="form-control" placeholder="Institute Code">
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" id="username" class="form-control" placeholder="Username">
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="password" class="form-control" placeholder="Password">
+                            </div>
+                            <button class="btn form-btn signin-btn w-100">Sign In</button>
+                        </form>
+                    </div>
+                    <div class="signup-box">
+                        <form class="signup-form">
+                             <h1>Institute Registration</h1>
+                            <div class="input-box">
+                                <i class="fa-solid fa-hashtag"></i>
+                                <input type="text" required id="s-brand-code" placeholder="Institute Code" class="form-control">
+                            </div>
+                             <div class="input-box">
+                                <i class="fa-solid fa-school"></i>
+                                <input type="text" required id="brand-name" placeholder="Institute Name" class="form-control">
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-solid fa-globe"></i>
+                                <input type="text" id="website" placeholder="Website (Optional)" class="form-control">
+                            </div>
+                             <div class="input-box">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="text" required id="contact" placeholder="Contact" class="form-control">
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                                <textarea id="address" required placeholder="Address" class="form-control"></textarea>
+                            </div>
+                             <div class="input-box">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" required id="s-username" placeholder="Username" class="form-control">
+                            </div>
+                             <div class="input-box">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" required id="s-password" placeholder="Password" class="form-control">
+                            </div>
+                            <button class="btn form-btn register-btn w-100">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <div class="user-link">
+                        <p>Are you a Student or Teacher? <a href="../homepage/homepage.html">Login Here</a></p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="images/login.webp" class="w-100" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="js/company.js"></script>
+</body>
+</html>

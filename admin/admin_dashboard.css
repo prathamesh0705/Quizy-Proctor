@@ -1,0 +1,107 @@
+/* admin_dashboard.css */
+
+/* --- Overall Page Styles --- */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --background-color: #f4f6f9; /* Light Gray/Off-White */
+    --card-bg-color: #ffffff; /* White */
+    --border-color: #e3e6ea;
+    --text-color: #343a40;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Navigation Bar --- */
+.navbar-dark.bg-dark {
+    background-color: #343a40 !important; /* Darker header */
+    border-bottom: 3px solid var(--primary-color); /* Accent line */
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ffffff !important;
+}
+
+/* --- Card Styles (Main Content) --- */
+.card {
+    border-radius: 12px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    border: none;
+}
+
+.card-header {
+    background-color: var(--card-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 12px 12px 0 0;
+    padding: 1.5rem;
+}
+.card-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.card-header h3 i {
+    margin-right: 10px;
+}
+
+.card-body h4 {
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Form Styles --- */
+.form-control {
+    border-radius: 8px;
+    border-color: var(--border-color);
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* --- Table Styles --- */
+.table {
+    margin-bottom: 0;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.table thead th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    border-bottom: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+.table-hover tbody tr:hover {
+    background-color: #e9ecef !important;
+    cursor: default;
+}
+
+/* Delete Icon */
+.del-teacher-btn {
+    transition: color 0.2s, transform 0.2s;
+}
+.del-teacher-btn:hover {
+    color: #dc3545 !important; /* Brighter red on hover */
+    transform: scale(1.2);
+}

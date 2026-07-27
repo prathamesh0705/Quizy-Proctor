@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizy - Online Test</title>
+
+    <link rel="stylesheet" href="../common/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <script src="../common/js/bootstrap.bundle.min.js"></script>
+    <script src="../common/js/sweetalert.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="exam-timer" style="position:fixed; top:10px; left:50%; transform:translateX(-50%); padding:10px 20px; background:var(--danger-color); color:white; font-size:18px; font-weight:bold; border-radius: 8px; z-index: 10000;">Time Left: --s</div>
+
+    <div class="quiz-container" id="quiz-box">
+        <div class="quiz-header">
+            <h2 id="subject-title">Quiz</h2>
+        </div>
+
+        <div class="quiz-body">
+            <h3 class="question-el" id="question-text">Q-1: Loading question...</h3>
+            <div class="options-container" id="options-list">
+                </div>
+        </div>
+
+        <div class="quiz-navigation" id="question-nav-container">
+             <h5>Question Palette</h5>
+            <div class="quiz-navigation-buttons" id="question-nav-buttons">
+                </div>
+        </div>
+
+        <div class="quiz-footer">
+            <button class="btn btn-primary" id="next-btn">SUBMIT QUESTION</button>
+        </div>
+    </div>
+    
+    <script defer src="js/quiz.js"></script>
+</body>
+</html>
